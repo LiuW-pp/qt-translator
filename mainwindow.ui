@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>翻译工具</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="topWidget" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="labelInput">
+         <property name="text">
+          <string>输入单词 / 句子：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditInput">
+         <property name="placeholderText">
+          <string>请输入要查询的单词或句子，回车或点击“翻译”</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelDirection">
+         <property name="text">
+          <string>翻译方向：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboDirection"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnTranslate">
+         <property name="text">
+          <string>翻译</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnClear">
+         <property name="text">
+          <string>清空</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QGroupBox" name="groupBoxResult">
+        <property name="title">
+         <string>翻译结果</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayoutResult">
+         <item>
+          <widget class="QTextEdit" name="textEditResult">
+           <property name="placeholderText">
+            <string>这里显示翻译的主释义和多个可能含义。</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBoxHistory">
+        <property name="title">
+         <string>查询历史</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayoutHistory">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayoutFilter">
+           <item>
+            <widget class="QLabel" name="labelFilter">
+             <property name="text">
+              <string>搜索：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEditFilter">
+             <property name="placeholderText">
+              <string>输入关键字搜索历史记录（原文、译文）</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableView" name="tableHistory"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayoutHistoryButtons">
+           <item>
+            <spacer name="horizontalSpacerHistory">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnDeleteSelected">
+             <property name="text">
+              <string>删除选中记录</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnClearHistory">
+             <property name="text">
+              <string>清空全部历史</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxExamples">
+      <property name="title">
+       <string>例句</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayoutExamples">
+       <item>
+        <widget class="QTextEdit" name="textEditExamples"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>900</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
