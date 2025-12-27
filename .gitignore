@@ -1,0 +1,39 @@
+# Qt build files
+build/
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+*.autosave
+
+# Compiled files
+*.o
+*.exe
+*.dll
+*.so
+*.dylib
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Database files (optional - you may want to commit this)
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
